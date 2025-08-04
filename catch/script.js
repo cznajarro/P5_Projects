@@ -4,6 +4,7 @@ let score;
 let speed;
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  rectMode(CENTER);
   score = 0;
   circleX = random(width);
   circleY=0;
@@ -17,6 +18,12 @@ function draw() {
   circleY+=speed;
   if (circleX < mouseX +20 && circleX > mouseX - 20 && circleY < 780 && circleY > 730) {
     score +=1
+    circleY=0;
+    circleX = random(width);
+    speed = random(2,5);
+  }
+  if (circleY >= 820) {
+    score = 0;
     circleY=0;
     circleX = random(width);
     speed = random(2,5);
