@@ -5,6 +5,7 @@ let speed;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
+  noCursor();
   score = 0;
   circleX = random(width);
   circleY=0;
@@ -28,5 +29,5 @@ function draw() {
     circleX = random(width);
     speed = random(2,5);
   }
-  print(score);
+  text("Score: " + score,10, windowHeight - 20);
 }
