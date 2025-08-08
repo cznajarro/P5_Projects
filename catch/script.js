@@ -12,6 +12,10 @@ function setup() {
   speed = random(2,5);
 }
 
+function windowResized(){
+	resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
   background(220);
   square(mouseX, 740,50 );
