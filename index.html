@@ -1,3 +1,37 @@
+<style>
+    .circles_button {
+        font-size: 130%;
+        background-color: rgb(243, 167, 27);
+        color: white;
+        height: 40px;
+        width: 90px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+
+    .circles_button:hover {
+        opacity: 0.7;
+    }
+
+    .catch_button {
+        font-size: 130%;
+        background-color: rgb(168, 255, 248);
+        color: rgb(255, 194, 168);
+        height: 40px;
+        width: 90px;
+        border-radius: 8px;
+        margin-left: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+
+    .catch_button:hover{
+        opacity: 0.7;
+    }
+
+</style>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +39,7 @@
     <title>All My P5!</title>
 </head>
 <body>
-    <a href="./circles">Circles!</a>
-    <a href="./catch/">Catch!</a>
+    <button class="circles_button"><a href="./circles">Circles!</a></button>
+    <button class="catch_button"><a href="./catch/">Catch!</a></button>
 </body>
 </html>
