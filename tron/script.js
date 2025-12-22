@@ -1,6 +1,9 @@
 let cell = 40;
 let columns, rows;
 let gameOver = false;
+let playerX = 40;
+let playerY = 40;
+let nextDirection = "right";
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -13,6 +16,10 @@ function draw() {
     rows = floor(windowHeight / cell);
     background(10);
     makeGrid();
+    circle(playerX, playerY,10);
+    keyPressed();
+    start();
+    
 }
 
 function makeGrid() {
@@ -27,6 +34,27 @@ function makeGrid() {
     }
 }
 
-function makePlayer() {
-    ellipse()
+function start() {
+  if (nextDirection == "left") {
+    playerX -= 2;
+  } else if (nextDirection == "up") {
+    playerY -= 2;
+  } else if (nextDirection == "down") {
+    playerY += 2;
+  } else {
+    playerX += 2;
+  }
+}
+
+
+function keyPressed() {
+  if (key === 'w') {
+    nextDirection = 'up';
+  } else if (key === 's') {
+    nextDirection = 'down';
+  } else if (key === 'd') {
+    nextDirection = 'right';
+  } else if (key === 'a') {
+    nextDirection = 'left';
+  }
 }
