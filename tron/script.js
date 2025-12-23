@@ -9,17 +9,19 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     frameRate(60);
     background(0);
+    columns = floor(windowWidth / cell);
+    rows = floor(windowHeight / cell);
+    makeGrid();
 }
 
 function draw() {
-    columns = floor(windowWidth / cell);
-    rows = floor(windowHeight / cell);
-    background(10);
-    makeGrid();
-    circle(playerX, playerY,10);
-    keyPressed();
+    noStroke();
+    fill(255,255, 0);
+    circle(playerX, playerY,8);
+  
     start();
-    
+    fill(255);
+    circle(playerX, playerY, 10);
 }
 
 function makeGrid() {
@@ -45,7 +47,6 @@ function start() {
     playerX += 2;
   }
 }
-
 
 function keyPressed() {
   if (key === 'w') {
