@@ -15,6 +15,13 @@ function draw() {
     for (let star of stars){
     star.move();
     star.show();
+    if (keyIsPressed == true){
+        if (key == "w"){
+          speed += 0.01;
+        } else if (key == "s") {
+          speed -= 0.01
+        }
+      }
     }
 }
 function windowResized(){
