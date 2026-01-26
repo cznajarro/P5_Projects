@@ -4,6 +4,11 @@ function setup() {
   background(0);
 }
 
+function windowResized(){
+	resizeCanvas(windowWidth, windowHeight);
+  background(0);
+}
+
 function draw() {
   let i = random(50,255);
   let x = random(50,255);
