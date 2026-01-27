@@ -1,5 +1,5 @@
 let stars = [];
-let speed = 12;
+let speed = 10;
 
 function setup() {
     createCanvas(windowWidth, windowHeight); //start the window
@@ -16,9 +16,9 @@ function draw() {
     star.move();
     star.show();
     if (keyIsPressed == true){
-        if (key == "w"){
+        if (key == "w" || key == "W"){
           speed += 0.01;
-        } else if (key == "s") {
+        } else if (key == "s" || key =="S") {
           speed -= 0.01
         }
       }
