@@ -7,6 +7,7 @@ let increase;
 let paused = false;
 let beforespeed;
 increase = 1;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
@@ -35,6 +36,7 @@ function keyPressed(){
 
 function draw() {
   background(220);
+  cursor(HAND); //I didn't want the cursor hidden anymore
   square(mouseX, 740,50 );
   circle(circleX, circleY, 10);
   circleY+=speed;
